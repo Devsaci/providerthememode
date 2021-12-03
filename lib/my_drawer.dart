@@ -42,6 +42,7 @@ class _MyDrawerState extends State<MyDrawer> {
             Switch(
               value: _swVal,
               onChanged: switchChange,
+              activeColor: Colors.black,
             ),
             Padding(
               padding: EdgeInsets.all(40.0),
