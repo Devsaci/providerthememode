@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Provider Theme Mode'),
+      themeMode: ThemeMode.light,
     );
   }
 }
