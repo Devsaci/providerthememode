@@ -1,11 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 import 'my_drawer.dart';
 
 void main() {
-  runApp( MyHomePage());
+  runApp(MyHomePage());
 }
-
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -13,9 +14,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   ThemeMode tm = ThemeMode.light;
   bool _swVal = false;
+
   void switchChange(bool value) {
     setState(() {
       _swVal = value;
@@ -35,12 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
       title: 'Flutter Fulaih',
       home: Scaffold(
-        appBar: AppBar(
-          title:  Text('Provider Theme Mode'),
-        ),
+        appBar: AppBar(title: Text('Provider Theme Mode')),
         body: null,
-        drawer:  MyDrawer(),
-        // This trailing comma makes auto-formatting nicer for build methods.
+        drawer: MyDrawer(switchChange),
       ),
       themeMode: tm,
       theme: ThemeData(primarySwatch: Colors.blue),
