@@ -22,7 +22,7 @@ class _MyDrawerState extends State<MyDrawer> {
       if (_swVal = false) {
         tm = ThemeMode.light;
       } else {
-
+        tm = ThemeMode.dark;
       }
     });
   }
