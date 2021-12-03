@@ -18,7 +18,7 @@ class _MyDrawerState extends State<MyDrawer> {
     setState(() {
       _swVal = value;
 
-      if (_swVal = false) {
+      if (_swVal == false) {
         tm = ThemeMode.light;
         print("$tm");
       } else {
