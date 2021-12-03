@@ -16,7 +16,15 @@ class _MyDrawerState extends State<MyDrawer> {
       child: Center(
         child: Row(
           mainAxisAlignment:MainAxisAlignment.center,
-          children: [
+          children:  [
+            Padding(
+              padding: EdgeInsets.all(40.0),
+              child: Text("Light"),
+            ),
+            Padding(
+              padding: EdgeInsets.all(40.0),
+              child: Text("Dark"),
+            ),
           ],
         ),
       ),
