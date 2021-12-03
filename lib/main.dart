@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Fulaih',
       home: MyHomePage(),
-      themeMode: ThemeMode.light,
+      themeMode: tm,
       theme: ThemeData(primarySwatch: Colors.blue),
       darkTheme: ThemeData(primaryColor: Colors.brown),
     );

@@ -8,11 +8,11 @@ class MyDrawer extends StatefulWidget {
   @override
   State<MyDrawer> createState() => _MyDrawerState();
 }
-
+ThemeMode tm = ThemeMode.light;
 class _MyDrawerState extends State<MyDrawer> {
   bool _swVal = false;
 
-  ThemeMode tm = ThemeMode.light;
+
 
   void switchChange(bool value) {
     setState(() {
