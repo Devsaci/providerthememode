@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'my_drawer.dart';
 
-void main() {
-  runApp(MyHomePage());
-}
+void main() => runApp(MyHomePage());
+
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -23,10 +22,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
       if (_swVal == false) {
         tm = ThemeMode.light;
-        print("${tm}");
+        // print("${tm}");
       } else {
         tm = ThemeMode.dark;
-        print("${tm}");
+        // print("${tm}");
       }
     });
   }
@@ -38,11 +37,11 @@ class _MyHomePageState extends State<MyHomePage> {
       home: Scaffold(
         appBar: AppBar(title: Text('Provider Theme Mode')),
         body: null,
-        drawer: MyDrawer(switchChange),
+        drawer: MyDrawer(switchChange, _swVal),
       ),
       themeMode: tm,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      darkTheme: ThemeData(primaryColor: Colors.black),
+      theme: ThemeData(primaryColorLight: Colors.yellow),
+      darkTheme: ThemeData(primaryColorDark: Colors.purple),
     );
   }
 }

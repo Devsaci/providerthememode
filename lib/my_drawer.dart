@@ -2,20 +2,22 @@
 
 import 'package:flutter/material.dart';
 
-ThemeMode tm = ThemeMode.light;
-bool _swVal = false;
 int x = 0;
 
 class MyDrawer extends StatefulWidget {
   final Function _function;
+   bool _swVal = false;
 
-  MyDrawer(this._function);
+  MyDrawer(this._function, this._swVal);
 
   @override
   State<MyDrawer> createState() => _MyDrawerState();
 }
 
 class _MyDrawerState extends State<MyDrawer> {
+  // ThemeMode tm = ThemeMode.light;
+
+
   @override
   Widget build(BuildContext context) {
     print("x = ${x + 1}");
@@ -29,7 +31,7 @@ class _MyDrawerState extends State<MyDrawer> {
               child: Text("Light"),
             ),
             Switch(
-              value: _swVal,
+              value: widget._swVal,
               onChanged: (bool val) => widget._function(val),
               activeColor: Colors.black,
               inactiveThumbColor: Colors.blue,
