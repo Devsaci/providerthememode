@@ -10,10 +10,9 @@ class MyDrawer extends StatefulWidget {
 }
 
 class _MyDrawerState extends State<MyDrawer> {
-
   bool _swVal = false;
 
-  ThemeMode tm= ThemeMode.light;
+  ThemeMode tm = ThemeMode.light;
 
   void switchChange(bool value) {
     setState(() {
@@ -21,8 +20,10 @@ class _MyDrawerState extends State<MyDrawer> {
 
       if (_swVal = false) {
         tm = ThemeMode.light;
+        print("$tm");
       } else {
         tm = ThemeMode.dark;
+        print("$tm");
       }
     });
   }
@@ -51,6 +52,4 @@ class _MyDrawerState extends State<MyDrawer> {
       ),
     );
   }
-
-
 }
