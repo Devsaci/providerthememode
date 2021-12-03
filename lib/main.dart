@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_drawer.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,8 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Fulaih',
       home: const MyHomePage(title: 'Provider Theme Mode'),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.blue,),
-      darkTheme:ThemeData(primaryColor: Colors.brown),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      darkTheme: ThemeData(primaryColor: Colors.brown),
     );
   }
 }
@@ -48,19 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headline4,
-            ),
+            const Text('You have pushed the button this many times:'),
+            Text('$_counter', style: Theme.of(context).textTheme.headline4),
           ],
         ),
       ),
+      drawer: MyDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
