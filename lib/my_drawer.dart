@@ -13,14 +13,18 @@ class _MyDrawerState extends State<MyDrawer> {
 
   bool _swVal = false;
 
+  ThemeMode tm= ThemeMode.light;
+
   void switchChange(bool value) {
     setState(() {
       _swVal = value;
 
+      if (_swVal = false) {
+        tm = ThemeMode.light;
+      } else {
 
-
+      }
     });
-
   }
 
   @override
