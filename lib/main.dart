@@ -15,6 +15,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   ThemeMode tm = ThemeMode.light;
+  bool _swVal = false;
+  void switchChange(bool value) {
+    setState(() {
+      _swVal = value;
+
+      if (_swVal == false) {
+        tm = ThemeMode.light;
+        print("${tm}");
+      } else {
+        tm = ThemeMode.dark;
+        print("${tm}");
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -17,21 +17,7 @@ class MyDrawer extends StatefulWidget {
 
 
 class _MyDrawerState extends State<MyDrawer> {
-  bool _swVal = false;
 
-  void switchChange(bool value) {
-    setState(() {
-      _swVal = value;
-
-      if (_swVal == false) {
-        tm = ThemeMode.light;
-        print("${tm}");
-      } else {
-        tm = ThemeMode.dark;
-        print("${tm}");
-      }
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
