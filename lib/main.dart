@@ -12,11 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Fulaih',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: const MyHomePage(title: 'Provider Theme Mode'),
       themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.blue,),
+      darkTheme:ThemeData(primaryColor: Colors.brown),
     );
   }
 }
