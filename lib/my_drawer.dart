@@ -35,7 +35,7 @@ class _MyDrawerState extends State<MyDrawer> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(40.0),
               child: Text("Light"),
             ),
@@ -45,7 +45,7 @@ class _MyDrawerState extends State<MyDrawer> {
               activeColor: Colors.black,
               inactiveThumbColor: Colors.blue,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(40.0),
               child: Text("Dark"),
             ),
