@@ -1,15 +1,20 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/material.dart';
+
+ThemeMode tm = ThemeMode.light;
+int x = 0;
 class MyDrawer extends StatefulWidget {
-  const MyDrawer({Key? key}) : super(key: key);
+
+    MyDrawer({Key? key}) : super(key: key);
 
   @override
   State<MyDrawer> createState() => _MyDrawerState();
+
 }
 
-ThemeMode tm = ThemeMode.light;
+
 
 class _MyDrawerState extends State<MyDrawer> {
   bool _swVal = false;
@@ -20,22 +25,23 @@ class _MyDrawerState extends State<MyDrawer> {
 
       if (_swVal == false) {
         tm = ThemeMode.light;
-        print("$tm");
+        print("${tm}");
       } else {
         tm = ThemeMode.dark;
-        print("$tm");
+        print("${tm}");
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    print("x = ${x+1}");
     return Drawer(
       child: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Padding(
+             Padding(
               padding: EdgeInsets.all(40.0),
               child: Text("Light"),
             ),
@@ -45,7 +51,7 @@ class _MyDrawerState extends State<MyDrawer> {
               activeColor: Colors.black,
               inactiveThumbColor: Colors.blue,
             ),
-            const Padding(
+             Padding(
               padding: EdgeInsets.all(40.0),
               child: Text("Dark"),
             ),

@@ -3,24 +3,9 @@ import 'package:flutter/material.dart';
 import 'my_drawer.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyHomePage());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Fulaih',
-      home: MyHomePage(),
-      themeMode: tm,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      darkTheme: ThemeData(primaryColor: Colors.brown),
-    );
-  }
-}
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -28,15 +13,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  ThemeMode tm = ThemeMode.light;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Provider Theme Mode'),
+    return MaterialApp(
+      title: 'Flutter Fulaih',
+      home: Scaffold(
+        appBar: AppBar(
+          title:  Text('Provider Theme Mode'),
+        ),
+        body: null,
+        drawer:  MyDrawer(),
+        // This trailing comma makes auto-formatting nicer for build methods.
       ),
-      body: Container(color: Colors.greenAccent,),
-      drawer: const MyDrawer(),
-      // This trailing comma makes auto-formatting nicer for build methods.
+      themeMode: tm,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      darkTheme: ThemeData(primaryColor: Colors.black),
     );
   }
 }
