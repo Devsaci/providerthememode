@@ -10,16 +10,26 @@ class MyDrawer extends StatefulWidget {
 }
 
 class _MyDrawerState extends State<MyDrawer> {
+
+  var _swVal;
+
+  void switchChange(bool value) {
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Center(
         child: Row(
-          mainAxisAlignment:MainAxisAlignment.center,
-          children:  [
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             Padding(
               padding: EdgeInsets.all(40.0),
               child: Text("Light"),
+            ),
+            Switch(
+              value: _swVal,
+              onChanged: switchChange,
             ),
             Padding(
               padding: EdgeInsets.all(40.0),
@@ -30,4 +40,6 @@ class _MyDrawerState extends State<MyDrawer> {
       ),
     );
   }
+
+
 }
