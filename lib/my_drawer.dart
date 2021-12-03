@@ -12,12 +12,11 @@ class MyDrawer extends StatefulWidget {
 class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
-    return  Drawer(
+    return Drawer(
       child: Center(
         child: Row(
-
+          mainAxisAlignment:MainAxisAlignment.center,
           children: [
-
           ],
         ),
       ),
