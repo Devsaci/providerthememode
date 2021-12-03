@@ -11,9 +11,16 @@ class MyDrawer extends StatefulWidget {
 
 class _MyDrawerState extends State<MyDrawer> {
 
-  var _swVal;
+  bool _swVal = false;
 
   void switchChange(bool value) {
+    setState(() {
+      _swVal = value;
+
+
+
+    });
+
   }
 
   @override
